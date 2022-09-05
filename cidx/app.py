@@ -10,6 +10,10 @@ log.setLevel(logging.ERROR)
 
 sliders = ['HDI', 'GDP', 'Gini', 'Population', 'Area']
 
+@app.route('/favicon.ico')
+def fav():
+    return ''
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if flask.request.method == 'GET':
@@ -25,8 +29,9 @@ def index():
                 .replace('CONTINENT', str(c['continent']))
 
         world_map = str(world_map)[:-3] + "}}\n]"
+        # table = pd.DataFrame(data=world_map).to_html()
 
-        return flask.render_template('index.html', sliders=sliders, world_map=world_map, table=pd.DataFrame(data=world_map).to_html())
+        return flask.render_template('index.html', sliders=sliders, world_map=world_map)
 
     return flask.request.form
 

@@ -5,11 +5,20 @@ html.cx
 
     *
         color: $fg
+
         transition: 0.2s
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
 
 body.cx
-    margin: 3rem
+    margin: 5rem
+
+    h1
+        margin-top: 0
+        margin-bottom: 3rem
+
+@media (max-width: 1500px)
+    body.cx
+        margin: 1rem
 
 header
     span.cx-logo
@@ -30,11 +39,13 @@ form.cx
         border: none
 
     button
-        border: none
         padding: 1rem
-        font-size: 1rem
         min-width: 100px
+
+        border: none
         background: $button
+        
+        font-size: 1rem
         border-radius: 10px
 
         &:hover
@@ -64,7 +75,7 @@ form.cx
 
     div.cx-input-container
         display: grid
-        grid-template-columns: 25% 25% 25% 25%
+        grid-template-columns: 20% 20% 20%
 
         div.cx-input-box
             margin-right: 1rem
@@ -73,7 +84,85 @@ form.cx
             label.cx-label
                 font-weight: bold
 
+@media (max-width: 1500px)
+    div.cx-input-container
+        grid-template-columns: 30% 30% !important
+
 @media (max-width: 1000px)
     div.cx-input-container
+        grid-template-columns: 40% !important
+
+@media (max-width: 777px)
+    div.cx-input-container
         grid-template-columns: 50% 50% !important
-  
+
+    div.cx-globe
+        position: static !important
+
+@media (max-width: 530px)
+    div.cx-input-container
+        grid-template-columns: 40% 30% !important
+
+span.cx-tip
+    opacity: 0.8
+    
+    &:hover
+        opacity: 1
+
+table.cx
+    th, td
+        padding-right: 2rem
+        padding-bottom: 1rem
+
+div.cx-globe
+    margin-top: 2rem
+
+    position: absolute
+    right: 5rem
+    top: 3rem
+
+    div#globe3d
+        width: 400px
+        height: 400px
+
+        padding: 1rem
+        margin-top: 1rem
+        margin-right: -3rem
+        margin-bottom: 1rem
+
+        border-radius: 10px
+        border: 1px solid $bg-light
+
+        canvas
+            position: relative
+
+            top: -1rem !important
+            left: -1rem !important
+
+        &:hover
+            cursor: grab
+
+@media (max-width: 777px)
+    div.cx-globe
+        width: 100% !important
+
+        div#globe3d
+            width: 90% !important
+
+svg#worldmap
+    background: $bg
+
+    border: 1px solid $bg-light
+    border-radius: 10px
+
+    &:hover
+        cursor: zoom-in
+
+    &:active
+        transform: scale(2) translateX(25%)
+
+@media (max-width: 800px)
+    svg#worldmap
+        &:active
+            transform: scale(2)      
+
