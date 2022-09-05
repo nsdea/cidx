@@ -1,2 +1,2 @@
 # 🗺️ CountryIndex
-CountryIndex (CIDX) is a web dashboard used for comparing countries (HDI, GDP, Gini-Index, Population, Area, …)
+CountryIndex (CIDX) is a website with which you can compare countries (HDI, GDP, Gini-Index, Population, Area, ...)

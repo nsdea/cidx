@@ -5,7 +5,14 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "**/.css": true,
+        "**/.css.map": true,
+        "cidx/static/stylesheets/base.css.map": true,
+        "cidx/static/stylesheets/base.css": true
     },
-    "hide-files.files": []
+    "hide-files.files": [
+        "cidx/static/stylesheets/base.css.map",
+        "cidx/static/stylesheets/base.css"
+    ]
 }

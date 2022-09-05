@@ -1,0 +1,79 @@
+@import "_vars.sass"
+
+html.cx
+    background: $bg
+
+    *
+        color: $fg
+        transition: 0.2s
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
+
+body.cx
+    margin: 3rem
+
+header
+    span.cx-logo
+        transition: 1s
+
+        &:hover
+            cursor: pointer
+
+        a
+            text-decoration: none
+
+span.cx-dark
+    opacity: 0.5
+    font-weight: normal
+
+form.cx
+    fieldset
+        border: none
+
+    button
+        border: none
+        padding: 1rem
+        font-size: 1rem
+        min-width: 100px
+        background: $button
+        border-radius: 10px
+
+        &:hover
+            cursor: pointer
+
+        &:active
+            opacity: 0.8
+
+    input[type="range"]
+        height: 25px
+        opacity: 0.7
+        position: relative
+        top: 10px
+
+        &:hover
+            opacity: 1
+
+        &::-webkit-slider-thumb
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+        &::-moz-range-thumb
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+    div.cx-input-container
+        display: grid
+        grid-template-columns: 25% 25% 25% 25%
+
+        div.cx-input-box
+            margin-right: 1rem
+            margin-bottom: 1rem
+
+            label.cx-label
+                font-weight: bold
+
+@media (max-width: 1000px)
+    div.cx-input-container
+        grid-template-columns: 50% 50% !important
+  
