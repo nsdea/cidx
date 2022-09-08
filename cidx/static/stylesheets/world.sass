@@ -1,0 +1,53 @@
+@import "_vars.sass"
+
+div.cx-globe
+    margin-top: 2rem
+
+    position: absolute
+    right: 5rem
+    top: 3rem
+
+    div#globe3d
+        width: 400px
+        height: 400px
+
+        padding: 1rem
+        margin-top: 1rem
+        margin-right: -3rem
+        margin-bottom: 1rem
+
+        border-radius: 10px
+        border: 1px solid $bg-light
+
+        canvas
+            position: relative
+
+            top: -1rem !important
+            left: -1rem !important
+
+        &:hover
+            cursor: grab
+
+@media (max-width: 777px)
+    div.cx-globe
+        width: 100% !important
+
+        div#globe3d
+            width: 90% !important
+
+svg#worldmap
+    background: $bg
+
+    border: 1px solid $bg-light
+    border-radius: 10px
+
+    &:hover
+        cursor: zoom-in
+
+    &:active
+        transform: scale(2) translateX(25%)
+
+@media (max-width: 800px)
+    svg#worldmap
+        &:active
+            transform: scale(2)      

@@ -9,10 +9,14 @@
         "**/.css": true,
         "**/.css.map": true,
         "cidx/static/stylesheets/base.css.map": true,
-        "cidx/static/stylesheets/base.css": true
+        "cidx/static/stylesheets/base.css": true,
+        "cidx/static/stylesheets/world.css": true,
+        "cidx/static/stylesheets/world.css.map": true
     },
     "hide-files.files": [
         "cidx/static/stylesheets/base.css.map",
-        "cidx/static/stylesheets/base.css"
+        "cidx/static/stylesheets/base.css",
+        "cidx/static/stylesheets/world.css",
+        "cidx/static/stylesheets/world.css.map"
     ]
 }

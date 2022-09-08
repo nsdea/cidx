@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="cx">
     
-    <script src="https://d3js.org/d3.v6.js"></script>
-    
-
 <head>
+    <title>🌎 CIDX</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+    <link rel="stylesheet" href="/static/stylesheets/main.css">
     <link rel="stylesheet" href="/static/stylesheets/base.css">
-    <title>🌎 CIDX</title>
+    <link rel="stylesheet" href="/static/stylesheets/world.css">
 
-
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 </head>
 
 <body class="cx">
@@ -63,20 +64,25 @@
         </script>
         
         <h2>Country Overview</h2>
-        <table class="cx">
+        <table class="cx sortable">
+            <!-- Header -->
+            {% if country_table %}
             <tr>
-                <th>Country</th>
-                <th>HDI</th>
+               {% for key in country_table[0] %}
+               <th> {{ key }} </th>
+               {% endfor %}
             </tr>
+            {% endif %}
+          
+            <!-- Rows -->
+            {% for dict_item in country_table %}
             <tr>
-                <td>Ghana</td>
-                <td>China</td>
+               {% for value in dict_item.values() %}
+               <td> {{ value }} </td>
+               {% endfor %}
             </tr>
-            <tr>
-                <td>0.62</td>
-                <td>-1</td>
-            </tr>
-        </table>    
+            {% endfor %}
+          </table>  
 
     </main>
 
